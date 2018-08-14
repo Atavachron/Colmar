@@ -1,0 +1,482 @@
+/*Universal Styles*/
+
+html {
+  font-size: 16px;
+  font-family: 'GlacialIndifferenceRegular', sans-serif;
+}
+
+body {
+  min-width: 80rem;
+}
+
+.bold {
+  font-weight: 900;
+}
+
+.grey {
+  color: grey;
+}
+
+main, footer {
+  position: relative;
+  top: 4rem;
+}
+
+h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+  font-weight: bold;
+}
+
+h2 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+h4 {
+  margin: 0.5rem 0;
+}
+
+.container {
+  display: flex;
+}
+
+video {
+  width: 100%;
+}
+
+li a {
+  text-decoration: none;
+  color: black;
+}
+
+li a:hover{
+  font-weight: bold;
+}
+
+main img {
+  width: 100%;
+}
+
+/*Header Styles*/
+
+header {
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 1.5rem;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  background-color: white;
+  font-size: 1.2rem;
+}
+
+.header-mobile {
+  display: none;
+}
+
+header img {
+  vertical-align: middle;
+}
+
+header .logo, header ul {
+  display: flex;
+  align-items: center;
+}
+
+header li {
+  margin-left: 1rem;
+}
+
+header .logo-text {
+  text-transform: uppercase;
+}
+
+
+@media only screen and (max-width: 480px) {
+  header.header-desktop {
+    display: none;
+  }
+
+  header.header-mobile {
+    position: static;
+    height: 4rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  main {
+    top: 0;
+  }
+}
+
+/* Banner section styles */
+
+.banner {
+  display: flex;
+  padding: 2rem 1.5rem;
+  box-sizing: border-box;
+  background-color: darkgrey;
+}
+
+.banner-image {
+  max-width: 60%;
+  margin-right: 1.5rem;
+}
+
+.banner-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 10%;
+  margin-left: 1rem;
+  width: 30rem;
+}
+
+.banner p {
+  margin-bottom: 1rem;
+}
+
+.banner .button {
+  padding: 1rem 3rem;
+  background-color: dimgray;
+  text-align: center;
+}
+
+.banner .button:hover{
+  background-color: darkslategrey;
+}
+
+.banner a {
+  color: white;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 480px) {
+  .banner {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    align-items: center;
+  }
+
+  .banner-image {
+    max-width: 100%;
+    margin-right: 0;
+  }
+
+  .banner .banner-text {
+    width: auto;
+    margin-right: 0;
+    margin-left: 0;
+    padding: 2rem 1rem;
+  }
+
+  .banner p {
+    margin: 2rem 0 0 0;
+    font-size: 1.6rem;
+  }
+
+  h1 {
+    margin-bottom: 0;
+    font-size: 3rem
+  }
+}
+
+/* Information section styles*/
+
+
+.information {
+  display: flex;
+  padding: 2rem 0 2rem 1.5rem;
+}
+
+.information-left {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin-right: 1.5rem;
+}
+
+.information-right {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+}
+
+.box:nth-child(-n+2) {
+  padding-left: 1rem;
+}
+
+.box .image-content {
+  width: 35%;
+  padding-bottom: 1rem;
+  padding-right: 1rem
+}
+
+.box-text-content {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 1rem;
+}
+
+.box:nth-child(3) {
+  background-color: grey;
+  padding-left: 1rem;
+  padding-top: 1rem;
+}
+
+.information-left h2 {
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  }
+
+.information-left .quote-info {
+  margin-top: 2rem;
+}
+
+.box p {
+  margin-bottom: 0.5rem;
+}
+
+.box a {
+  text-decoration: none;
+}
+
+.information-mobile {
+  display: none;
+}
+
+
+@media only screen and (max-width: 480px) {
+  .information {
+    padding: 1rem 1rem 2rem 1rem;
+  }
+
+  .information-left, .information-desktop {
+    display: none;
+  }
+
+  .information-right {
+    width: 100%;
+    align-items: center;
+    }
+
+  .information-right .box {
+    flex-direction: column;
+    padding-left: 0;
+  }
+
+  .box .image-content {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+  }
+
+  .information-mobile {
+    display: block;
+  }
+
+  span.information-mobile {
+    display: inline;
+  }
+
+  .box:nth-child(3) {
+    background-color: inherit;
+    padding-left: 0;
+    padding-top: 0;
+  }
+
+  .box-text-content {
+    width: 100%;
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    margin-right: 0;
+    padding-left: 1rem;
+  }
+}
+
+/* Learning Section Styles  */
+
+.learning {
+  background-color: gray;
+  padding-top: 2rem;
+}
+
+.learning .container {
+  flex-direction: column;
+  padding: 2rem 3.5rem;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.learning-box {
+  flex: 1;
+  margin: 1rem;
+  background-color: white;
+  overflow: hidden;
+}
+
+.learning-box-text-content {
+  padding: 1rem 1rem 1.5rem 1rem;
+}
+
+
+@media only screen and (max-width: 480px) {
+  .learning {
+    background-color: white;
+  }
+
+  .learning .container {
+    padding: 1rem;
+  }
+
+  h4, .learning-box-text-content p, .learning img {
+    display: none;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .learning h2 {
+  padding-bottom: 1rem;
+``}
+  .learning-box {
+    margin: 0;
+  }
+
+  .learning-box-text-content {
+    margin-bottom: 0.5rem;
+    background-color: grey;
+    padding: 1rem;
+  }
+
+  .learning-box-text-content:hover {
+    background-color: darkslategrey;
+    color: white;
+  }
+}
+
+
+/*Exhibit Styles*/
+
+.exhibit {
+  padding: 2rem 0;
+}
+
+.exhibit h2 {
+  padding-bottom: 2rem;
+}
+
+.exhibit .container {
+  padding-left: 1.5rem;
+}
+
+.exhibit-right {
+  margin-left: 1.5rem;
+  width: 40%;
+}
+
+.exhibit-right-box {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+
+.exhibit img {
+  width: 35%;
+  height: 35%;
+  padding-right: 1rem
+}
+
+
+.exhibit-right-box:nth-child(1) {
+  background-color: grey;
+}
+
+.exhibit-right-text {
+  width: 65%;
+}
+
+.exhibit-left {
+  width: 60%;
+}
+
+.exhibit-left-text {
+  margin-top: 1.5rem;
+}
+
+
+@media only screen and (max-width: 480px) {
+  .exhibit-right, .exhibit-left-text {
+    display: none;
+  }
+
+  .exhibit-left {
+    width: 100%;
+  }
+
+  .exhibit .container {
+    padding: 0;
+  }
+}
+
+/*Footer Styles*/
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1rem 3rem 1.5rem;
+  border-top: 1px solid grey;
+}
+
+footer ul {
+  display: flex;
+}
+
+footer ul li {
+  margin-left: 1rem;
+}
+
+
+@media only screen and (max-width: 480px) {
+  footer ul {
+    display: none;
+  }
+
+  footer {
+    padding: 1rem;
+  }
+}
+
+/*Removing min-width for mobile version*/
+
+@media only screen and (max-width: 480px) {
+ body {
+    min-width: 0;
+  }
+}
